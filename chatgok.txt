@@ -1,21 +1,62 @@
-#1#chatgok: A communication pipeline between the government and the citizens#
-#2#Class:Government_Profile:
-    #3#fields:
-      #4#county_office: string,persistent#
-      #5#governor's_name: string,persistent#
-      #6#password_hash: string, persistent#
-      #7#gender: string, persistent#
-      #8#parent: boolean, persistent#
-      #9#minimal_community_size# // A COMMUNITY NEEDS TO HAVE A CERTAIN NUMBER OF PEOPLE TO ACHIEVE THE PRIVILEDGE OF BEING ABLE TO SEND A MESSAGE, THAT NUMBER IS SET BY THE GOVERNOR.
+#0# ReadMe For Large Language Model:
+- THE FOLLOWING IS AN INSTRUCTION TEMPLATE FOR AN L.L.M. WRITTEN IN WHAT I CALL METTAM MARKDOWN. STUDY THE SYNTAX AND THE INSTRUCTIONS CONTAINED HEREIN. YOUR PURPOSE IS TO OUTPUT ANOTHER METTAM MARKDOWN FOR ANOTHER L.L.M.
+-# <NUMBER>#...INSTRUCTOIONS...#  <~ THIS IS WHAT I CALL AN INSTRUCTIONS WINDOW. THE NUMBER IS FOR REFERENCE AND CONTEXT WHEN WE (ME AND AN LLM) ARE COMMUNICATING BACK AND FORTH.
+-"persistent" <~ REFERS TO DATA THAT SHOULD BE STORED PERMANENTLY OR SEMI-PERMANENTLY, SURVIVES PROGRAM RESTARTS, USER SESSIONS, EXECUTIONS OR TRANSACTIONS.
+-"ephemeral" <~ REFERS TO TEMPORARY DATA, ONY EXISTS DURING POGRAM EXECUTION OR SESSION
+- FLAG AMBIGOUS TERMS, LOGICAL GAPS, LOGICAL CONFLICTS, SECURITY ISSUES.
+- DETECT MISSING CONSTRAINTS.
+- CHECK MEMORY USAGE.
+-DETECT CONFLICT.
+-ANALYZE, VALIDATE AND CRITIQUE EVERYTHING LINE BY LINE.
+-LOCAL RULES TAKE PRECEDENCE GLOBLAL RULES.
+-PROVIDE HINTS AND SUGGESTIONS.
+
+     #1# chatgok:
+          - A communication pipeline between the county government and the county citizens.
+          - it is the county governor's responsibility to create a community.
+          - it is the county citizens responsibility to join communities created by the governor
+          - Example workflow: Suppose member A of community M writes and sends a message. The message first goes to all members of community M who must vote for it so that the message can proceed   to the governor. If two-thirds vote for it. The message proceeds to the governor.
+          - We will be using the solana blockchain to create this application. so we are developing a dapp.
+          - KES 50/= will be required to validate national Identification numbers with I.P.R.S.
+          - KES 2/= will be required to cast a vote.
+     #
+#
+#2#Class:county_government:
+    #3# fields:
+      #4# county_office: string,persistent#
+      #5# governor's_name: string,persistent#
+      #6# password_hash: string, persistent#
+      #7# wallet address: string, persistent#
+      #8# minimal_community_size: - A community needs to have a certain predefined population of people to be able to send a message to the governor.#
 
     #
-    #10#methods:
-       #11# create_community(name,size)
-       -minimal_community_size = size
-       -community_name = name
+    #9#methods:
+       #10# create_community(name,size)
+         -minimal_community_size = size.
+         -community_name = name.
+       #
+
+       #11# Read_message()
+         -Message from community.
+       #
+
+       #12# Write message (community_name, message)
+         -communicate with the community.
        #
 
     #
 
+
+#
+
+#14#Class: county_citizen:
+      #15# fields:
+        #16# name: string, peristent#
+        #17# I.D : number, u32, persistent#
+        #18# message: string,ephemeral#
+      #
+      #18#methods:
+        #19# write_message() #
+      #
 
 #
