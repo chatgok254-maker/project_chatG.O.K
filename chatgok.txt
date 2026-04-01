@@ -1,0 +1,21 @@
+#1#chatgok: A communication pipeline between the government and the citizens#
+#2#Class:Government_Profile:
+    #3#fields:
+      #4#county_office: string,persistent#
+      #5#governor's_name: string,persistent#
+      #6#password_hash: string, persistent#
+      #7#gender: string, persistent#
+      #8#parent: boolean, persistent#
+      #9#minimal_community_size# // A COMMUNITY NEEDS TO HAVE A CERTAIN NUMBER OF PEOPLE TO ACHIEVE THE PRIVILEDGE OF BEING ABLE TO SEND A MESSAGE, THAT NUMBER IS SET BY THE GOVERNOR.
+
+    #
+    #10#methods:
+       #11# create_community(name,size)
+       -minimal_community_size = size
+       -community_name = name
+       #
+
+    #
+
+
+#
